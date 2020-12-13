@@ -7,6 +7,8 @@
   --white: #ffffff;
   --sm: 12px;
   --md: 14px;
+  --lg: 24px;
+  --xd: 32px;
 }
 
 *,
@@ -46,7 +48,7 @@ body {
   line-height: 1.5;
   color: #111111;
   text-align: left;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -399,6 +401,10 @@ h6,
 }
 .blue-text {
   color: var(--blue);
+}
+
+.text-md {
+  font-size: var(--lg);
 }
 
 /* Small devices (landscape phones, 576px and up) */
