@@ -1,0 +1,29 @@
+{
+  "name": "xchange",
+  "version": "1.0.0",
+  "description": "E Commerce UI",
+  "main": "index.js",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omarookolosio94/xchange.git"
+  },
+  "keywords": [
+    "E",
+    "Commerce",
+    "Front",
+    "End"
+  ],
+  "author": "Oghenemaro Okolosio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Omarookolosio94/xchange/issues"
+  },
+  "homepage": "https://github.com/Omarookolosio94/xchange"
+}
