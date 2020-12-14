@@ -1,0 +1,50 @@
+:root {
+  --green: #096133;
+  --blue: #4e3e8f;
+  --blue-hover: #5a499e;
+  --black: #111111;
+  --border: #dbe0df;
+  --white: #ffffff;
+  --sm: 12px;
+  --md: 14px;
+  --nor: 16px;
+  --lg: 24px;
+  --xd: 32px;
+  --exd: 42px;
+}
+
+.section-heading {
+  padding: 1rem 0;
+  border: 1px solid red;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.section-heading .heading-text {
+  margin: 0 5px 0 0;
+  padding: 0;
+  color: var(--blue-hover);
+  font-weight: bold;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .box-heading {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
