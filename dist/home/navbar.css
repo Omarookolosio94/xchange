@@ -252,7 +252,8 @@ section#exhibit {
 
 @media (max-width: 768px) {
   .content {
-    width: 90%;
+    margin-top: 10rem;
+    width: 80%;
   }
   .lead {
     font-size: var(--lg);
