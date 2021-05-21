@@ -4,41 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XChange</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
-      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-      crossorigin="anonymous"
-    />
 
-    <link rel="stylesheet" href="./home/reset.css" />
-    <link rel="stylesheet" href="./home/navbar.css" />
-    <link rel="stylesheet" href="./home/exhibition_slide.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar">
+      <nav class="navbar home">
         <div class="container">
           <!-- Logo -->
           <div class="logo">
-            <img src="./asset/xchange_brand.svg" alt="" />
+            <img src="./asset/img/xchange_brand.svg" alt="" />
           </div>
 
           <!-- Search Bar -->
@@ -57,22 +39,12 @@
 
             <!-- Nav Links -->
             <ul class="navlink">
-              <li class="nav-item dropdown link-2 show-sm">
-                <i class="fas fa-caret-down"></i>
-                <div class="dropdown-content">
-                  <a href="">
-                    <i class="fas fa-user"></i>
-                    <span>Profile</span>
-                  </a>
-                  <a href="">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span>Cart</span>
-                  </a>
-                  <a href="">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Sign Out</span>
-                  </a>
-                </div>
+              <li
+                id="toggle-nav"
+                class="nav-item link-2 toggler show-sm"
+                onclick="openNav()"
+              >
+                <i class="fas fa-bars"></i>
               </li>
               <!-- <li class="nav-item">
                 <a href="" class="link-1">
@@ -92,152 +64,70 @@
                   <span>Log In</span>
                 </a>
               </li>
-              <li class="nav-item link-2">
-                <span>Sign Up</span>
+
+              <li
+                id="theme-link-toggle"
+                class="nav-item link-2 hide-sm link-theme-toggle-icon"
+                onclick="ToggleTheme()"
+              >
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
               </li>
             </ul>
+
+            <div id="side-nav" class="side-nav">
+              <div class="nav-btn" onclick="closeNav()">
+                Close<i class="fas fa-times"></i>
+              </div>
+              <a class="links" href="">
+                <span>Register/Login</span>
+              </a>
+              <a class="links" href="">
+                <span>Profile</span>
+              </a>
+              <a class="links" href="">
+                <span>Cart</span>
+              </a>
+              <a class="links" href="">
+                <span>Sign Out</span>
+              </a>
+
+              <div
+                class="nav-btn no-border"
+                id="theme-toggle"
+                onclick="ToggleTheme()"
+              >
+                <span id="toggle-text">Activate Dark Mode</span
+                ><span class="slider round"></span>
+              </div>
+
+              <div class="nav-footer">
+                &copy;<span class="footer-year"></span> XChange E-commerce.
+                Designed By Matrix
+              </div>
+            </div>
           </div>
         </div>
       </nav>
     </header>
 
-    <!-- Exhibit Section -->
-    <section id="exhibit">
-      <div class="container">
-        <div class="content">
-          <p class="lead">Sell Gaming Accessories</p>
-
-          <p class="sub-lead">
-            Easily sell your game CDs and other accessories you no longer need.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Main sections -->
-    <section id="main">
-      <div class="container">
-        <div class="section-heading">
-          <p class="heading-text">Hot Deals</p>
-          <span>Only the best deals</span>
-        </div>
-        <!-- Hot Deals Section / Promo Items -->
-        <div class="product-list">
-          <div class="product">
-            <div class="product-action add-to-like">
-              <i class="fas fa-heart"></i>
-            </div>
-            <a href="">
-              <div class="product-img">
-                <img src="./asset/ps4_joystick_lg.jpg" class="hide-sm" alt="" />
-                <img src="./asset/ps4-joystick_sm.jpg" class="show-sm" alt="" />
-              </div>
-            </a>
-            <div class="product-detail">
-              <a href="" class="product-qty">10 available </a>
-              <a href="" class="product-info">Ps4 Wireless Joystick</a>
-              <span class="product-price"> NGN 2,500 </span>
-            </div>
-          </div>
-          <div class="product">
-            <div class="product-action add-to-like">
-              <i class="fas fa-heart"></i>
-            </div>
-            <a href="">
-              <div class="product-img">
-                <img src="./asset/xbox_lg.jpg" class="hide-sm" alt="" />
-                <img src="./asset/xbox_sm.jpg" class="show-sm" alt="" />
-              </div>
-            </a>
-            <div class="product-detail">
-              <a href="" class="product-qty">Limited </a>
-              <a href="" class="product-info">kevlar XBox X Design</a>
-              <span class="product-price"> NGN 250,000 </span>
-            </div>
-          </div>
-          <div class="product">
-            <div class="product-action add-to-like">
-              <i class="fas fa-heart"></i>
-            </div>
-            <a href="">
-              <div class="product-img">
-                <img src="./asset/ps5_console_lg.jpg" class="hide-sm" alt="" />
-                <img src="./asset/ps5_console_sm.jpg" class="show-sm" alt="" />
-              </div>
-            </a>
-            <div class="product-detail">
-              <a href="" class="product-qty">Sold Out </a>
-              <a href="" class="product-info"
-                >Plain Ps5 Limited with Dual Shock Controller</a
-              >
-              <span class="product-price"> NGN 550,000 </span>
-            </div>
-          </div>
-          <div class="product">
-            <div class="product-action add-to-like">
-              <i class="fas fa-heart"></i>
-            </div>
-            <a href="">
-              <div class="product-img">
-                <img src="./asset/ps5_new_lg.jpg" class="hide-sm" alt="" />
-                <img src="./asset/ps5_new_sm.jpg" class="show-sm" alt="" />
-              </div>
-            </a>
-            <div class="product-detail">
-              <a href="" class="product-qty">3 In stock </a>
-              <a href="" class="product-info">Ps5 Limited Edition</a>
-              <span class="product-price"> NGN 480,000 </span>
-            </div>
-          </div>
-          <div class="product">
-            <div class="product-action add-to-like">
-              <i class="fas fa-heart"></i>
-            </div>
-            <a href="">
-              <div class="product-img">
-                <img src="./asset/xbox_lg.jpg" class="hide-sm" alt="" />
-                <img src="./asset/xbox_sm.jpg" class="show-sm" alt="" />
-              </div>
-            </a>
-            <div class="product-detail">
-              <a href="" class="product-qty">20 in store </a>
-              <a href="" class="product-info">Microsoft XBox 360</a>
-            </div>
-            <span class="product-price"> NGN 250,000 </span>
-          </div>
-        </div>
-
-        <!-- Newly Added -->
-        <!-- Random Products -->
-      </div>
-    </section>
-
-    <section class="footer">
-      <div class="container">
-        <div class="info">
-          <div class="about">
-            <div class="logo">
-              <span>XChange</span>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
-              quos culpa rem nesciunt ex itaque quae, odit quidem at id.
+    <section class="page-exhibit">
+      <div class="overlay">
+        <div class="container">
+          <div class="page-content">
+            <h1 class="text-capitalize">
+              Shopping with just <br />a click of a Button
+            </h1>
+            <p class="mb-3">
+              Create an account and buy your favourite products online, all for
+              free and within minutes.
             </p>
+            <button class="btn btn-primary" type="submit">Shop now</button>
           </div>
-          <ul>
-            <li>
-              <a href="!#">About Us</a>
-              <a href="!#">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div class="copyright">
-          Designed By
-          <a href="">Matrix Web</a> <span>&#169; 2020</span>
         </div>
       </div>
     </section>
 
-    <script src="./js/slide.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
