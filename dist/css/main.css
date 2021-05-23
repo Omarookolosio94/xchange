@@ -1342,6 +1342,33 @@ section.page-exhibit {
   text-align: right;
 }
 
+section.page-exhibit.social-handle {
+  background: url("../asset/img/delivery.jpg") no-repeat;
+  height: 60vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+section.page-exhibit.social-handle .page-content {
+  text-align: center;
+}
+
+.social-handle .fab {
+  font-size: 62px;
+  color: var(--blue-hover);
+}
+
+.social-handle .btn:hover {
+  background-color: transparent;
+}
+
+/**** Load More ***/
+
+.load-more {
+  text-align: center;
+}
+
 @media (max-width: 576px) {
   .hide-sm {
     display: none;
