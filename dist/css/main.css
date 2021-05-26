@@ -592,6 +592,14 @@ h6,
   text-transform: uppercase;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-lg {
+  font-size: var(--lg);
+}
+
 .btn {
   position: relative;
   overflow: hidden;
@@ -652,7 +660,7 @@ h6,
 .container {
   margin: 0 auto;
   overflow-x: hidden;
-  width: 90%;
+  width: 95%;
 }
 
 /* Navbar */
@@ -1008,6 +1016,22 @@ section.page-exhibit {
   background-position: center center;
   overflow-x: hidden;
   margin-bottom: 0;
+}
+
+section.page-exhibit.best-seller {
+  background: url("../asset/img/dual_controller.jpg") no-repeat;
+  height: 70vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+section.page-exhibit.new-arrivals {
+  background: url("../asset/img/new_product.jpg") no-repeat;
+  height: 70vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
 }
 
 .page-content {
@@ -1370,20 +1394,6 @@ section.page-exhibit.social-handle .page-content {
   text-align: center;
 }
 
-@media (max-width: 576px) {
-  .hide-sm {
-    display: none;
-  }
-
-  .show-sm {
-    display: block;
-  }
-
-  .product-sorting .view-product {
-    display: none;
-  }
-}
-
 /******* FOOTER STYLE **********/
 footer {
   padding: 4rem 0;
@@ -1413,6 +1423,48 @@ footer {
 .footer-box ul li {
   margin-bottom: 1rem;
 }
+
+#scrollUp {
+  position: fixed;
+  z-index: 500;
+  background-color: var(--blue-hover);
+  border-radius: 0;
+  bottom: 60px;
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 30%);
+  color: var(--border);
+  font-size: 24px;
+  height: 40px;
+  line-height: 40px;
+  right: 60px;
+  text-align: center;
+  width: 40px;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  display: none;
+}
+
+#scrollUp:hover {
+  background-color: var(--blue);
+}
+
+[data-theme="dark"] #scrollUp {
+  color: var(--black);
+}
+
+@media (max-width: 576px) {
+  .hide-sm {
+    display: none;
+  }
+
+  .show-sm {
+    display: block;
+  }
+
+  .product-sorting .view-product {
+    display: none;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
 }
