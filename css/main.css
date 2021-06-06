@@ -600,6 +600,10 @@ h6,
   font-size: var(--lg);
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
 .btn {
   position: relative;
   overflow: hidden;
@@ -898,7 +902,7 @@ h6,
   color: var(--black);
   cursor: pointer;
   background: inherit;
-  border-bottom: 1px solid #e6eaea;
+  border-bottom: 1px solid var(--border);
   transition: 0.3s;
   text-transform: capitalize;
 }
@@ -1433,18 +1437,19 @@ footer {
   margin-bottom: 1rem;
 }
 
-#scrollUp {
+#scrollUp,
+.cart-icon {
   position: fixed;
   z-index: 500;
   background-color: var(--blue-hover);
   border-radius: 0;
-  bottom: 60px;
+  bottom: 30px;
   box-shadow: 0 2px 6px 0 rgb(0 0 0 / 30%);
   color: var(--border);
   font-size: 24px;
   height: 40px;
   line-height: 40px;
-  right: 60px;
+  right: 20px;
   text-align: center;
   width: 40px;
   -webkit-transition-duration: 500ms;
@@ -1452,11 +1457,30 @@ footer {
   display: none;
 }
 
+.cart-icon {
+  left: 20px;
+  width: 60px;
+}
+
+.cart-icon i {
+  color: var(--white);
+  font-size: 12px;
+}
+
+.cart-icon span {
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
 #scrollUp:hover {
   background-color: var(--blue);
 }
 
-[data-theme="dark"] #scrollUp {
+[data-theme="dark"] #scrollUp,
+[data-theme="dark"] .cart-icon,
+[data-theme="dark"] .cart-icon i {
   color: var(--black);
 }
 
@@ -1536,7 +1560,7 @@ table th {
   max-width: 25%;
   font-size: 12px;
   text-transform: capitalize;
-  font-weight: 400;
+  font-weight: bold;
   border: 1px solid var(--border);
 }
 
