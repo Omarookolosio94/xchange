@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XChange | Best Sellers</title>
+    <title>XChange | Cart</title>
 
     <link
       rel="stylesheet"
@@ -93,160 +93,99 @@
       </nav>
     </header>
 
-    <section class="page-exhibit best-seller">
+    <section class="page-exhibit cart-sections">
       <div class="overlay">
         <div class="container">
           <div class="page-content text-center">
-            <p class="text-uppercase mt-2 mb-2 text-lg">Best Sellers</p>
-            <p>
-              Popular products that have ordered daily. The list of our products
-              in popular demand
-            </p>
+            <p class="text-uppercase mt-2 mb-2 text-lg">Cart</p>
+            <p>Review your cart list and proceed to order</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="product-listing">
+    <section class="cart-list-section">
       <div class="container">
-        <div class="product-topbar">
-          <!-- Total Products -->
-          <p class="text-uppercase mt-1">Showing 1-8 0f 25 Products</p>
-
-          <div class="product-sorting">
-            <div class="sort-by-date">
-              <p>Sort by</p>
-              <form action="#" method="get">
-                <div class="custom-select">
-                  <select>
-                    <option value="value">Date</option>
-                    <option value="value">Newest</option>
-                    <option value="value">Popular</option>
-                  </select>
-                </div>
-              </form>
-            </div>
-            <div class="view-product">
-              <p>View</p>
-              <form action="#" method="get">
-                <div class="custom-select">
-                  <select>
-                    <option value="value">12</option>
-                    <option value="value">24</option>
-                    <option value="value">48</option>
-                    <option value="value">96</option>
-                  </select>
-                </div>
-              </form>
-            </div>
+        <div class="cart-list-box">
+          <div class="cart-list-table hide-sm">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cart-item-img">
+                    <img src="./asset/img/ps_controller.jpg" alt="" />
+                  </td>
+                  <td class="cart-item-name">PS4 Controller Wireless</td>
+                  <td class="cart-item-price">&#8358; 2500</td>
+                  <td class="qty">
+                    <div class="qty-btn">
+                      <p>Qty</p>
+                      <div class="quantity">
+                        <span
+                          class="qty-minus"
+                          onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) effect.value--;return false;"
+                          ><i class="fa fa-minus" aria-hidden="true"></i
+                        ></span>
+                        <input
+                          type="number"
+                          class="qty-text"
+                          id="qty"
+                          step="1"
+                          min="1"
+                          max="300"
+                          name="quantity"
+                          value="1"
+                        />
+                        <span
+                          class="qty-plus"
+                          onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"
+                          ><i class="fa fa-plus" aria-hidden="true"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
-        <div class="products-listing-box">
-          <div class="single-product-wrapper">
-            <div class="product-img">
-              <img src="./asset/img/controller_2.jpg" alt="" />
-            </div>
 
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="line"></div>
-                <p class="product-price">&#8358;180</p>
-                <a href="product-details.html">
-                  <h6>PS4 Controller</h6>
-                </a>
-              </div>
-              <div class="ratings-cart">
-                <div class="ratings">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <div class="product-action mt-1">
-                  <a href="" class="">
-                    <i class="fas fa-shopping-cart"></i> Add To Cart</a
-                  >
-                </div>
-              </div>
-            </div>
+          <div class="cart-list-sm show-sm">
+            <ul class="cart-item-sm">
+              <li><p>Product Name</p><span>PS Controller with dual controller Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, nihil.</span></li>
+              <li><p>Product ID</p><span>02134</span></li>
+              <li><p>Price</p><span>&#8358; 2500</span></li>
+             <li><p>Quantity</p><span>
+              <input
+              type="number"
+              class="cart-list-sm-input"
+              step="1"
+              min="1"
+              max="300"
+              name="quantity"
+              value="1"
+            />
+             </span></li>
+            </ul>
           </div>
-          <div class="single-product-wrapper">
-            <div class="product-img">
-              <img src="./asset/img/controller_2.jpg" alt="" />
+    
+          <div class="cart-summary">
+            <ul class="summary-table">
+              <li><span class="text-uppercase">CART SUMMARY</span> <span>&#8358;</span></li>
+              <li><span>Subtotal</span> <span>140.00</span></li>
+              <li><span>Tax</span> <span>0.00</span></li>
+              <li><span>Delivery</span> <span>0.00</span></li>
+              <li><span>Total</span> <span>140.00</span></li>
+            </ul>
+            <div class="cart-summary-btn mt-3">
+              <button class="btn btn-primary checkout-btn">Checkout</a>
             </div>
-
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="line"></div>
-                <p class="product-price">&#8358;180</p>
-                <a href="product-details.html">
-                  <h6>PS4 Controller</h6>
-                </a>
-              </div>
-              <div class="ratings-cart">
-                <div class="ratings">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <div class="product-action mt-1">
-                  <a href="" class="">
-                    <i class="fas fa-shopping-cart"></i> Add To Cart</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="single-product-wrapper">
-            <div class="product-img">
-              <img src="./asset/img/controller_2.jpg" alt="" />
-            </div>
-
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="line"></div>
-                <p class="product-price">&#8358;180</p>
-                <a href="product-details.html">
-                  <h6>PS4 Controller</h6>
-                </a>
-              </div>
-              <div class="ratings-cart">
-                <div class="ratings">
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                  <i class="fa fa-star" aria-hidden="true"></i>
-                </div>
-                <div class="product-action mt-1">
-                  <a href="" class="">
-                    <i class="fas fa-shopping-cart"></i> Add To Cart</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="load-more mb-4">
-      <div class="container">
-        <div class="load-more-box mb-2">
-          <div class="btn btn-primary">Load More</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-exhibit social-handle">
-      <div class="overlay">
-        <div class="container">
-          <div class="page-content">
-            <p class="mb-2">Connect with us on instagram</p>
-            <a class="btn" type="submit"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -336,6 +275,7 @@
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
       crossorigin="anonymous"
     ></script>
+    
     <script src="./js/index.js"></script>
     <script src="./js/custom-select.js"></script>
 

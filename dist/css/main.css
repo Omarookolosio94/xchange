@@ -611,7 +611,7 @@ h6,
   font-family: inherit;
   font-size: 1.25rem;
   border: 0;
-  border-radius: 0.5rem;
+  /*border-radius: 0.5rem;*/
   background: transparent;
   color: #f7f7f7;
   cursor: pointer;
@@ -881,6 +881,7 @@ h6,
   background-color: var(--white);
   overflow-x: hidden;
   transition: 0.5s;
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 30%);
 }
 
 .side-nav.open {
@@ -1029,6 +1030,14 @@ section.page-exhibit.best-seller {
 section.page-exhibit.new-arrivals {
   background: url("../asset/img/new_product.jpg") no-repeat;
   height: 70vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+section.page-exhibit.cart-sections {
+  background: url("../asset/img/cart_dark.jpg") no-repeat;
+  height: 40vh;
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
@@ -1451,6 +1460,199 @@ footer {
   color: var(--black);
 }
 
+/*****************************************************/
+/*                 CART SECTION                      */
+/*****************************************************/
+
+.cart-list-section {
+  margin: 4rem 0 2rem;
+}
+
+.cart-list-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-list-box .cart-list-table {
+  width: 70%;
+  overflow: hidden;
+}
+
+.cart-table {
+  overflow: hidden;
+  outline: none;
+  width: 100%;
+  display: block;
+}
+
+.cart-table thead,
+.cart-table tbody {
+  width: 100%;
+  display: block;
+}
+.cart-table thead {
+  background-color: var(--white-hover);
+}
+
+.cart-table thead tr {
+  display: flex;
+  width: 100%;
+  height: 40px;
+}
+
+.cart-table tbody tr {
+  display: flex;
+  align-items: center;
+  /*width: 100%;*/
+  border: 1px solid var(--border);
+}
+
+.cart-item-img {
+  overflow: hidden;
+  min-height: 150px;
+}
+
+.cart-item-img img {
+  height: auto;
+  min-height: 150px;
+  max-width: 100%;
+}
+
+.cart-table tbody tr td {
+  border: none;
+  width: 25%;
+  max-width: 25%;
+}
+
+table td,
+table th {
+  padding: 0.75rem;
+}
+
+.cart-table thead tr th {
+  border-top: none;
+  border-bottom: none;
+  width: 25%;
+  max-width: 25%;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 400;
+  border: 1px solid var(--border);
+}
+
+.qty-btn {
+  display: flex;
+}
+
+.qty-btn p {
+  margin-bottom: 0;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.qty-btn .quantity {
+  position: relative;
+  z-index: 1;
+}
+
+.qty-btn .quantity .qty-minus,
+.qty-btn .quantity .qty-plus {
+  position: absolute;
+  top: 0;
+  line-height: 40px;
+  width: 20px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.qty-btn .quantity .qty-minus {
+  right: 40px;
+}
+.qty-btn .quantity .qty-plus {
+  right: 0;
+}
+
+.qty-btn .quantity input {
+  text-align: center;
+  background-color: transparent;
+  height: 40px;
+  width: 60px;
+  border: none;
+  appearance: textfield;
+  font-size: 14px;
+}
+
+.cart-list-box .cart-summary {
+  border: 1px solid var(--border);
+  padding: 30px 20px 60px;
+  width: 25%;
+  min-width: 220px;
+}
+
+.cart-summary h5 {
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+
+.summary-table {
+  margin-top: 30px;
+  padding: 0;
+}
+
+.summary-table li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.cart-summary-btn {
+  text-align: center;
+}
+
+.checkout-btn {
+  width: 100%;
+}
+
+.cart-list-sm {
+  display: none;
+  padding: 0;
+}
+
+.cart-item-sm {
+  border: 1px solid var(--border);
+  margin: 0;
+  padding: 30px 20px;
+  list-style: none;
+}
+
+.cart-item-sm li {
+  padding: 1rem 0;
+  display: flex;
+  color: var(--dark-hover);
+}
+
+.cart-item-sm span {
+  color: var(--black);
+}
+
+.cart-item-sm p {
+  color: var(--dark-hover);
+  min-width: 120px;
+}
+
+.cart-list-sm-input {
+  border: 1px solid var(--border);
+  outline: none;
+  background-color: transparent;
+  padding: 5px;
+  color: var(--black);
+}
+
 @media (max-width: 576px) {
   .hide-sm {
     display: none;
@@ -1471,6 +1673,20 @@ footer {
 
 /* Large devices (desktops, 992px and up) */
 @media (max-width: 992px) {
+  .cart-list-box {
+    display: block;
+  }
+
+  .cart-list-box .cart-list-table {
+    width: 100%;
+  }
+
+  .cart-list-box .cart-summary {
+    display: block;
+    margin-top: 2.5rem;
+    width: auto;
+    min-width: auto;
+  }
 }
 
 @media (min-width: 768px) {
