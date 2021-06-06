@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XChange | Cart</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header id="top">
+      <nav class="navbar home">
+        <div class="container">
+          <!-- Logo -->
+          <div class="logo">
+            <img src="./asset/img/xchange_brand.svg" alt="" />
+          </div>
+
+          <!-- Search Bar -->
+          <div class="nav-list">
+            <form class="search-box show-md">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search..."
+                aria-label="Search"
+              />
+              <button class="search-btn" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+
+            <!-- Nav Links -->
+            <ul class="navlink">
+              <li class="nav-item hide-sm">
+                <a href="" class="link-1">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>cart</span>
+                </a>
+              </li>
+              <li
+                id="toggle-nav"
+                class="nav-item link-2 toggler"
+                onclick="openNav()"
+              >
+                <i class="fas fa-bars"></i>
+              </li>
+            </ul>
+
+            <div id="side-nav" class="side-nav">
+              <div class="nav-btn" onclick="closeNav()">
+                . <i class="fas fa-times"></i>
+              </div>
+              <a class="links" href="index.html">
+                <span>Home</span>
+              </a>
+              <a class="links" href="">
+                <span>Daily Deals</span>
+              </a>
+              <a class="links" href="Best_Seller.html">
+                <span>Best Sellers</span>
+              </a>
+              <a class="links" href="New_Arrivals.html">
+                <span>New Arrivals</span>
+              </a>
+              <a class="links" href="">
+                <span>Cart</span>
+              </a>
+
+              <div
+                class="nav-btn no-border"
+                id="theme-toggle"
+                onclick="ToggleTheme()"
+              >
+                <span id="toggle-text">Activate Dark Mode</span
+                ><span class="slider round"></span>
+              </div>
+
+              <div class="nav-footer">
+                &copy;<span class="footer-year"></span> XChange E-commerce.
+                Designed By Matrix
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="page-exhibit cart-sections">
+      <div class="overlay">
+        <div class="container">
+          <div class="page-content text-center">
+            <p class="text-uppercase mt-2 mb-2 text-lg">Cart</p>
+            <p>Review your cart list and proceed to order</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart-list-section">
+      <div class="container">
+        <div class="cart-list-box">
+          <div class="cart-list-table hide-sm">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cart-item-img">
+                    <img src="./asset/img/ps_controller.jpg" alt="" />
+                  </td>
+                  <td class="cart-item-name">PS4 Controller Wireless</td>
+                  <td class="cart-item-price">&#8358; 2500</td>
+                  <td class="qty">
+                    <div class="qty-btn">
+                      <p>Qty</p>
+                      <div class="quantity">
+                        <span
+                          class="qty-minus"
+                          onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) effect.value--;return false;"
+                          ><i class="fa fa-minus" aria-hidden="true"></i
+                        ></span>
+                        <input
+                          type="number"
+                          class="qty-text"
+                          id="qty"
+                          step="1"
+                          min="1"
+                          max="300"
+                          name="quantity"
+                          value="1"
+                        />
+                        <span
+                          class="qty-plus"
+                          onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"
+                          ><i class="fa fa-plus" aria-hidden="true"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="cart-list-sm show-sm">
+            <ul class="cart-item-sm">
+              <li><p>Product Name</p><span>PS Controller with dual controller Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, nihil.</span></li>
+              <li><p>Product ID</p><span>02134</span></li>
+              <li><p>Price</p><span>&#8358; 2500</span></li>
+             <li><p>Quantity</p><span>
+              <input
+              type="number"
+              class="cart-list-sm-input"
+              step="1"
+              min="1"
+              max="300"
+              name="quantity"
+              value="1"
+            />
+             </span></li>
+            </ul>
+          </div>
+    
+          <div class="cart-summary">
+            <ul class="summary-table">
+              <li><span class="text-uppercase">CART SUMMARY</span> <span>&#8358;</span></li>
+              <li><span>Subtotal</span> <span>140.00</span></li>
+              <li><span>Tax</span> <span>0.00</span></li>
+              <li><span>Delivery</span> <span>0.00</span></li>
+              <li><span>Total</span> <span>140.00</span></li>
+            </ul>
+            <div class="cart-summary-btn mt-3">
+              <button class="btn btn-primary checkout-btn">Checkout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-box">
+          <div class="footer-item footer-list">
+            <ul>
+              <li class="list-header text-uppercase">XChange</li>
+              <li>
+                <a href="">About XChange</a>
+              </li>
+              <li>
+                <a href="">Contact Us</a>
+              </li>
+              <li>
+                <a href="">Where To Buy</a>
+              </li>
+              <li>
+                <a href="">XChange Warranty</a>
+              </li>
+              <li>
+                <a href="">Terms of Service</a>
+              </li>
+              <li>
+                <a href="">Refund Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item footer-list">
+            <ul>
+              <li class="list-header text-uppercase">Shop</li>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="">Daily Deals</a>
+              </li>
+              <li>
+                <a href="Best_Seller.html">Best Seller</a>
+              </li>
+              <li>
+                <a href="New_Arrivals.html">New Arrival</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item footer-list">
+            <ul>
+              <li class="list-header text-uppercase">Buy From us</li>
+              <li>
+                <a href="">Order & shipping</a>
+              </li>
+              <li>
+                <a href="">Replacement Policy</a>
+              </li>
+              <li>
+                <a href="">XChange Warranty</a>
+              </li>
+              <li>
+                <a href="">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-item footer-list">
+            <ul>
+              <li class="list-header text-uppercase">Customer Service</li>
+              <li>
+                <a href="tel:+2348011111">+234 0000 000 000</a>
+              </li>
+              <li>
+                <a href="tel:+2348019000">+234 0000 000 000</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="scrollUp" onclick="scrollTopAnimated()">
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    
+    <script src="./js/index.js"></script>
+    <script src="./js/custom-select.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 300) {
+            $(".navbar").removeClass("home");
+          } else {
+            $(".navbar").addClass("home");
+          }
+        });
+
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 1000) {
+            $("#scrollUp").css({ display: "block" });
+          } else {
+            $("#scrollUp").css({ display: "none" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
