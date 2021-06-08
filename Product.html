@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XChange</title>
+    <title>XChange | Product</title>
     <link
       rel="icon"
       href="./asset/img/xchange_brand_color.svg"
@@ -102,20 +102,12 @@
       </nav>
     </header>
 
-    <section class="page-exhibit">
+    <section class="page-exhibit cart-sections">
       <div class="overlay">
         <div class="container">
-          <div class="page-content">
-            <h1 class="text-capitalize text-xd">
-              Shopping with just <br />a click of a Button
-            </h1>
-            <p class="mb-3">
-              Create an account and buy your favourite products online, all for
-              free and within minutes.
-            </p>
-            <button class="btn btn-primary btn-sm mx-1" type="submit">
-              Shop now
-            </button>
+          <div class="page-content text-center">
+            <p class="text-uppercase mt-2 mb-2 text-md">Product</p>
+            <p>PS4 Dual Shock Controller</p>
           </div>
         </div>
       </div>
@@ -123,7 +115,6 @@
 
     <section class="main-deal my-4">
       <div class="container">
-        <p class="title-text mb-2">Daily Deal</p>
         <div class="deal-box">
           <div class="deal-image">
             <div class="deal-main-image mb-1">
@@ -206,172 +197,137 @@
       </div>
     </section>
 
-    <section class="product-listing">
+    <section class="product-full-details">
       <div class="container">
-        <div class="product-topbar">
-          <!-- Total Products -->
-          <p class="text-uppercase mt-1">Showing 1-8 0f 25 Products</p>
+        <div id="tabs" class="c-tabs no-js">
+          <div class="c-tabs-nav">
+            <a href="#" class="c-tabs-nav__link is-active">
+              <span>Details</span>
+            </a>
+            <a href="#" class="c-tabs-nav__link">
+              <span>Customer Review</span>
+            </a>
+            <a href="#" class="c-tabs-nav__link">
+              <span>Shipping and Returns</span>
+            </a>
+          </div>
+          <div class="c-tab is-active">
+            <button class="accordion">Details</button>
+            <div class="c-tab__content">
+              <p>PS4 Controller Dual Shock Absorber</p>
+              <h4>Product Feature:</h4>
+              <p>
+                BT Version: V5.0<br />Talk Range: 10m<br />Battery Capacity:
+                37mAh(earbud), 500mAh (case)<br />Battery Life: Up to 82 hours
+                standby time / 3.5 hours playtime / 3 hours talk time / Case
+                provides up to 6 full charges<br /><br /><strong
+                  >Rich Sound</strong
+                >
+                <br />A 13mm dynamic driver produces sound with flawless
+                accuracy and treble that sparkles full of detail.<br /><br /><strong
+                  >Comfortable Fit</strong
+                ><br />Earbuds are ergonomically designed to conform to the
+                shape of your ear canal. A single earbud weighs only 3g, making
+                it easier and more comfortable to wear.<br /><br /><strong
+                  >Stay Charged</strong
+                ><br />A handy and compact charging case allows you to extend
+                3.5 hours of music playtime to 24.5, so you can enjoy all-day
+                use.<br /><br /><strong>Touch Controls</strong><br />A force
+                sensor on both earbuds allows you to effortlessly answer calls
+                and adjust music with a simple touch.<br /><br /><strong
+                  >Instant Connection</strong
+                >
+                <br />After the initial setup, the earbuds automatically connect
+                to your paired device when removed from the case and disconnect
+                when returned. <br />
+              </p>
+            </div>
+          </div>
+          <div class="c-tab">
+            <button class="accordion">Customer Review</button>
+            <div class="c-tab__content">
+              <div class="review-btn">
+                <button
+                  class="btn btn-sm btn-primary mb-3 float-right"
+                  onclick="openModal('review-modal')"
+                >
+                  Add Review
+                </button>
+              </div>
+              <div class="review clear">
+                <span>Owolabe Etobe</span>
 
-          <div class="product-sorting">
-            <div class="sort-by-date">
-              <p>Sort by</p>
-              <form action="#" method="get">
-                <div class="custom-select">
-                  <select>
-                    <option value="value">Date</option>
-                    <option value="value">Newest</option>
-                    <option value="value">Popular</option>
-                  </select>
+                <div class="ratings">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-              </form>
-            </div>
-            <div class="view-product">
-              <p>View</p>
-              <form action="#" method="get">
-                <div class="custom-select">
-                  <select>
-                    <option value="value">12</option>
-                    <option value="value">24</option>
-                    <option value="value">48</option>
-                    <option value="value">96</option>
-                  </select>
+
+                <p>
+                  I really like the product when is the next version coming out.
+                  I cannot wait
+                </p>
+              </div>
+              <div class="review">
+                <span>John Doe</span>
+
+                <div class="ratings">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="products-listing-box">
-          <div class="single-product-wrapper">
-            <a href="Product.html" class="product-img">
-              <img src="./asset/img/dark_controller.jpg" alt="" />
-            </a>
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="ratings-cart">
-                  <div class="ratings">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </div>
-                </div>
-                <a href="Product.html">
-                  <h6@>PS4 Controller</h6>
-                </a>
-                <p class="product-price text-bold">&#8358;180</p>
+
+                <p>Great product. very nice to use</p>
               </div>
             </div>
-            <div class="product-overlay">
-              
-              <button class="btn btn-sm btn-primary mb-1">Add To Cart</button>
-              <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
-            </div>
           </div>
-          <div class="single-product-wrapper">
-            <a href="Product.html" class="product-img">
-              <img src="./asset/img/dark_controller.jpg" alt="" />
-            </a>
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="ratings-cart">
-                  <div class="ratings">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </div>
-                </div>
-                <a href="Product.html">
-                  <h6@>PS4 Controller</h6>
-                </a>
-                <p class="product-price text-bold">&#8358;180</p>
-              </div>
-            </div>
-            <div class="product-overlay">
-              
-              <button class="btn btn-sm btn-primary mb-1">Add To Cart</button>
-              <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
-            </div>
-          </div>
-          <div class="single-product-wrapper">
-            <a href="Product.html" class="product-img">
-              <img src="./asset/img/dark_controller.jpg" alt="" />
-            </a>
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="ratings-cart">
-                  <div class="ratings">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </div>
-                </div>
-                <a href="Product.html">
-                  <h6@>PS4 Controller</h6>
-                </a>
-                <p class="product-price text-bold">&#8358;180</p>
-              </div>
-            </div>
-            <div class="product-overlay">
-              
-              <button class="btn btn-sm btn-primary mb-1">Add To Cart</button>
-              <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
-            </div>
-          </div>
-          <div class="single-product-wrapper">
-            <a href="Product.html" class="product-img">
-              <img src="./asset/img/dark_controller.jpg" alt="" />
-            </a>
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="ratings-cart">
-                  <div class="ratings">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </div>
-                </div>
-                <a href="Product.html">
-                  <h6@>PS4 Controller</h6>
-                </a>
-                <p class="product-price text-bold">&#8358;180</p>
-              </div>
-            </div>
-            <div class="product-overlay">
-              
-              <button class="btn btn-sm btn-primary mb-1">Add To Cart</button>
-              <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
+          <div class="c-tab">
+            <button class="accordion">Shipping and Returns</button>
+            <div class="c-tab__content">
+              <h4>Returns Policy</h4>
+              <p>
+                You may return most new, unopened items within 30 days of
+                delivery for a full refund. We'll also pay the return shipping
+                costs if the return is a result of our error (you received an
+                incorrect or defective item, etc.).
+              </p>
+              <p>
+                You should expect to receive your refund within three weeks of
+                giving your package to the return shipper, however, in many
+                cases, you will receive a refund more quickly.
+              </p>
+              <p>
+                If you need to return an item, please contact our consumer
+                service email care.ng@oraimo.com and attach your order ID and
+                your issue. If the refund is approved we will notify you via
+                e-mail.
+              </p>
+              <h4>Shipping</h4>
+              <p>
+                We can ship to virtually any address in Nigeria. Note that if
+                you can build an order at the checkout process that's mean we
+                cant deliver the parcel to the address which you fill.
+              </p>
+              <p>
+                When you place an order, we will estimate shipping and delivery
+                dates for you based on the availability of your items and the
+                shipping options you choose. Depending on the shipping provider
+                you choose, shipping date estimates may appear on the shipping
+                quotes page.
+              </p>
+              <p>
+                Please also note that the shipping rates for many items we sell
+                are price-based. For example, if your order is over free
+                shipping price request we will exempt all shipping fees and just
+                charge the product fee.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="load-more mb-4">
-      <div class="container">
-        <div class="load-more-box mb-2">
-          <div class="btn btn-primary btn-sm">Load More</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-exhibit social-handle">
-      <div class="overlay">
-        <div class="container">
-          <div class="page-content">
-            <p class="mb-2">Connect with us on instagram</p>
-            <a class="btn" type="submit"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <footer>
       <div class="container">
         <div class="footer-box">
@@ -453,6 +409,58 @@
       <span>5</span>
     </a>
 
+    <div id="review-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="text-capitalize text-bold">Rate Product</p>
+          <p class="close">
+            <i class="fas fa-times close-modal"></i>
+          </p>
+        </div>
+        <div class="modal-body">
+          <form action="" class="form modal-form">
+            <div class="input-group">
+              <label for="">Your Rating</label>
+              <div class="range-wrap">
+                <div class="range-value" id="rangeV"></div>
+                <input
+                  id="range"
+                  type="range"
+                  min="1"
+                  max="5"
+                  value="5"
+                  step="1"
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="">Your Name</label>
+              <input name="name" type="text" placeholder="John Doe" />
+            </div>
+            <div class="input-group">
+              <label for="">Your Email</label>
+              <input name="email" type="text" placeholder="JohnDoe@gmail.com" />
+            </div>
+            <div class="input-group">
+              <label for="">Review Content</label>
+              <textarea name="name" type="text" placeholder=""></textarea>
+            </div>
+            <div class="modal-btn-box">
+              <button class="btn btn-sm btn-primary modal-btn">
+                Submit Your Reviews
+              </button>
+              <button
+                class="btn btn-sm btn-outline mx-1 modal-btn"
+                onclick="closeModal(event , 'review-modal')"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -483,6 +491,52 @@
           }
         });
       });
+    </script>
+    <script src="js/tabs.js"></script>
+    <script>
+      var myTabs = tabs({
+        el: "#tabs",
+        tabNavigationLinks: ".c-tabs-nav__link",
+        tabContentContainers: ".c-tab",
+      });
+
+      myTabs.init();
+    </script>
+    <script>
+      const range = document.getElementById("range"),
+        rangeV = document.getElementById("rangeV"),
+        setValue = () => {
+          const newValue = Number(
+              ((range.value - range.min) * 100) / (range.max - range.min)
+            ),
+            newPosition = 10 - newValue * 0.2;
+          rangeV.innerHTML = `<span>${range.value}</span>`;
+          rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+        };
+      document.addEventListener("DOMContentLoaded", setValue);
+      range.addEventListener("input", setValue);
+    </script>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      if ($(window).width() < 600) {
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+              panel.style.padding = 0;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+              panel.style.padding = "1.5rem";
+            }
+          });
+        }
+      } else {
+        console.log("600");
+      }
     </script>
   </body>
 </html>

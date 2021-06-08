@@ -44,3 +44,32 @@ function ToggleTheme() {
 function scrollTopAnimated() {
   $("html, body").animate({ scrollTop: "0" });
 }
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close-modal")[0];
+var modal;
+
+function openModal(modalId) {
+  modal = document.getElementById(modalId);
+  modal.style.display = "block";
+}
+
+span.onclick = function () {
+  modal.style.display = "none";
+  modal = "";
+};
+
+function closeModal(e, modalId) {
+  e.preventDefault();
+  modal = document.getElementById(modalId);
+  modal.style.display = "none";
+  modal = "";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    modal = "";
+  }
+};
