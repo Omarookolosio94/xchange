@@ -212,6 +212,7 @@
             </a>
           </div>
           <div class="c-tab is-active">
+            <button class="accordion">Details</button>
             <div class="c-tab__content">
               <p>PS4 Controller Dual Shock Absorber</p>
               <h4>Product Feature:</h4>
@@ -243,9 +244,13 @@
             </div>
           </div>
           <div class="c-tab">
+            <button class="accordion">Customer Review</button>
             <div class="c-tab__content">
               <div class="review-btn">
-                <button class="btn btn-sm btn-primary mb-3 float-right">
+                <button
+                  class="btn btn-sm btn-primary mb-3 float-right"
+                  onclick="openModal('review-modal')"
+                >
                   Add Review
                 </button>
               </div>
@@ -279,6 +284,7 @@
             </div>
           </div>
           <div class="c-tab">
+            <button class="accordion">Shipping and Returns</button>
             <div class="c-tab__content">
               <h4>Returns Policy</h4>
               <p>
@@ -403,6 +409,58 @@
       <span>5</span>
     </a>
 
+    <div id="review-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="text-capitalize text-bold">Rate Product</p>
+          <p class="close">
+            <i class="fas fa-times close-modal"></i>
+          </p>
+        </div>
+        <div class="modal-body">
+          <form action="" class="form modal-form">
+            <div class="input-group">
+              <label for="">Your Rating</label>
+              <div class="range-wrap">
+                <div class="range-value" id="rangeV"></div>
+                <input
+                  id="range"
+                  type="range"
+                  min="1"
+                  max="5"
+                  value="5"
+                  step="1"
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="">Your Name</label>
+              <input name="name" type="text" placeholder="John Doe" />
+            </div>
+            <div class="input-group">
+              <label for="">Your Email</label>
+              <input name="email" type="text" placeholder="JohnDoe@gmail.com" />
+            </div>
+            <div class="input-group">
+              <label for="">Review Content</label>
+              <textarea name="name" type="text" placeholder=""></textarea>
+            </div>
+            <div class="modal-btn-box">
+              <button class="btn btn-sm btn-primary modal-btn">
+                Submit Your Reviews
+              </button>
+              <button
+                class="btn btn-sm btn-outline mx-1 modal-btn"
+                onclick="closeModal(event , 'review-modal')"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -443,6 +501,42 @@
       });
 
       myTabs.init();
+    </script>
+    <script>
+      const range = document.getElementById("range"),
+        rangeV = document.getElementById("rangeV"),
+        setValue = () => {
+          const newValue = Number(
+              ((range.value - range.min) * 100) / (range.max - range.min)
+            ),
+            newPosition = 10 - newValue * 0.2;
+          rangeV.innerHTML = `<span>${range.value}</span>`;
+          rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+        };
+      document.addEventListener("DOMContentLoaded", setValue);
+      range.addEventListener("input", setValue);
+    </script>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      if ($(window).width() < 600) {
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+              panel.style.padding = 0;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+              panel.style.padding = "1.5rem";
+            }
+          });
+        }
+      } else {
+        console.log("600");
+      }
     </script>
   </body>
 </html>
