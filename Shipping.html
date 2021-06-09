@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XChange | Cart</title>
+    <title>XChange | Shipping</title>
 
-     
     <link
       rel="icon"
       href="./asset/img/xchange_brand_color.svg"
@@ -28,6 +27,7 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
+
   <body>
     <header id="top">
       <nav class="navbar home">
@@ -75,7 +75,7 @@
               <a class="links" href="index.html">
                 <span>Home</span>
               </a>
-            
+
               <a class="links" href="Best_Seller.html">
                 <span>Best Sellers</span>
               </a>
@@ -109,95 +109,117 @@
       <div class="overlay">
         <div class="container">
           <div class="page-content text-center">
-            <p class="text-uppercase mt-2 mb-2 text-md">Cart</p>
-            <p>Review your cart list and proceed to order</p>
+            <p class="text-uppercase mt-2 mb-2 text-md">Payment</p>
+            <p>
+              Fill in contact information. Payments will be made on delivery
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cart-list-section">
+    <section class="shipping-section">
       <div class="container">
-        <div class="cart-list-box">
-          <div class="cart-list-table hide-sm">
-            <table class="cart-table">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th>Name</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="cart-item-img">
-                    <img src="./asset/img/ps_controller.jpg" alt="" />
-                  </td>
-                  <td class="cart-item-name">PS4 Controller Wireless</td>
-                  <td class="cart-item-price">&#8358; 2500</td>
-                  <td class="qty">
-                    <div class="qty-btn">
-                      <p>Qty</p>
-                      <div class="quantity">
-                        <span
-                          class="qty-minus"
-                          onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) effect.value--;return false;"
-                          ><i class="fa fa-minus" aria-hidden="true"></i
-                        ></span>
-                        <input
-                          type="number"
-                          class="qty-text"
-                          id="qty"
-                          step="1"
-                          min="1"
-                          max="300"
-                          name="quantity"
-                          value="1"
-                        />
-                        <span
-                          class="qty-plus"
-                          onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"
-                          ><i class="fa fa-plus" aria-hidden="true"></i
-                        ></span>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="cart-list-sm show-sm">
-            <ul class="cart-item-sm">
-              <li><p>Product Name</p><span>PS Controller with dual controller Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, nihil.</span></li>
-              <li><p>Product ID</p><span>02134</span></li>
-              <li><p>Price</p><span>&#8358; 2500</span></li>
-             <li><p>Quantity</p><span>
-              <input
-              type="number"
-              class="cart-list-sm-input"
-              step="1"
-              min="1"
-              max="300"
-              name="quantity"
-              value="1"
-            />
-             </span></li>
-            </ul>
-          </div>
-    
-          <div class="cart-summary">
+        <div class="shipping-section-box">
+          <div class="shipping-items">
+            <p class="text-bold summary-header">Shipping Summary</p>
+            <button class="accordion">Shipping Summary</button>
             <ul class="summary-table">
-              <li><span class="text-capitalize text-bold">Cart Summary</span> <span>&#8358;</span></li>
-              <li><span>Subtotal</span> <span>140.00</span></li>
-              <li><span>Tax</span> <span>0.00</span></li>
-              <li><span>Delivery</span> <span>0.00</span></li>
-              <li class="text-bold text-nor"><span>Total</span> <span>&#8358; 140.00</span></li>
+              <li><span>Subtotal</span> <span>₦ 140.00</span></li>
+              <li><span>Tax</span> <span> ₦ 0.00</span></li>
+              <li>
+                <span>Delivery</span>
+                <span class="text-sm text-muted">calculated at next step</span>
+              </li>
+              <li class="text-bold text-nor">
+                <span>Total</span> <span>₦ 140.00</span>
+              </li>
             </ul>
-            <div class="cart-summary-btn mt-3">
-              <button class="btn btn-primary checkout-btn btn-sm" onclick="RedirectToShipping(event)">Checkout</a>
-            </div>
+          </div>
+          <div class="shipping-info">
+            <form action="" class="form shipping-form">
+              <div class="input-group">
+                <p class="form-header">Contact Information</p>
+              </div>
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" placeholder="email" />
+                <small class="danger">email is required</small>
+              </div>
+              <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" placeholder="phone" />
+                <small
+                  >In case we need to contact you concerning your order</small
+                >
+                <small class="success">number passed is valid</small>
+              </div>
+              <div class="input-group">
+                <p class="form-header">Shipping Address</p>
+              </div>
+              <div class="input-group">
+                <div class="input-group">
+                  <label for="first Name">First Name</label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                  />
+                  <small class="danger">first name is required</small>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="lastName">Surname/Last Name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name / Surname"
+                />
+              </div>
+              <div class="input-group">
+                <label for="address">Address</label>
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="48 Vaughan Street"
+                />
+              </div>
+              <div class="input-group">
+                <label for="city">City</label>
+                <input type="text" name="city" placeholder="city" />
+              </div>
+              <div class="input-group">
+                <label for="state">State</label>
+                <select
+                  placeholder="State"
+                  id="state-select"
+                  class="form-select"
+                >
+                  <option disabled="" selected>State</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label for="postal_code">Postal Code</label>
+                <input
+                  type="text"
+                  name="postal_code"
+                  class="input-sm"
+                  placeholder="postal code"
+                />
+              </div>
+              <div class="input-group">
+                <input
+                  type="checkbox"
+                  name="save_info"
+                  id=""
+                  class="form-checkbox"
+                />
+                <span for="">Save this information for next time</span>
+              </div>
+              <button class="btn btn-primary btn-sm">
+                Continue To Shipping
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -284,7 +306,7 @@
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
       crossorigin="anonymous"
     ></script>
-    
+
     <script src="./js/index.js"></script>
     <script src="./js/custom-select.js"></script>
 
@@ -301,13 +323,55 @@
 
         $(window).scroll(function () {
           var scroll = $(window).scrollTop();
-          if (scroll > 1000) {
-            $("#scrollUp").css({ display: "block" });
+          if (scroll > 200) {
+            $("#scrollUp").css({
+              display: "block",
+            });
           } else {
-            $("#scrollUp").css({ display: "none" });
+            $("#scrollUp").css({
+              display: "none",
+            });
           }
         });
       });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          type: "GET",
+          url: "./asset/data/states.json",
+          success: function (result) {
+            const item = result;
+            for (var i = 0; i <= item.length; i++) {
+              $("#state-select").append(
+                '<option value="' +
+                  item[i].Code +
+                  '">' +
+                  item[i].Name +
+                  "</option>"
+              );
+            }
+          },
+        });
+      });
+    </script>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      if ($(window).width() < 992) {
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + 500 + "px";
+            }
+          });
+        }
+      }
     </script>
   </body>
 </html>

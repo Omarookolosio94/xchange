@@ -188,6 +188,7 @@
                 type="submit"
                 value="5"
                 class="btn btn-sm btn-primary mt-2"
+                onclick="AddToCart(event)"
               >
                 Add to cart
               </button>
@@ -406,7 +407,7 @@
 
     <a class="cart-icon" href="Cart.html">
       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-      <span>5</span>
+      <span id="cart-count"></span>
     </a>
 
     <div id="review-modal" class="modal">
@@ -515,6 +516,12 @@
         };
       document.addEventListener("DOMContentLoaded", setValue);
       range.addEventListener("input", setValue);
+
+      var span = document.getElementsByClassName("close-modal")[0];
+      span.onclick = function () {
+        modal.style.display = "none";
+        modal = "";
+      };
     </script>
     <script>
       var acc = document.getElementsByClassName("accordion");
@@ -534,8 +541,6 @@
             }
           });
         }
-      } else {
-        console.log("600");
       }
     </script>
   </body>

@@ -45,8 +45,6 @@ function scrollTopAnimated() {
   $("html, body").animate({ scrollTop: "0" });
 }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close-modal")[0];
 var modal;
 
 function openModal(modalId) {
@@ -54,16 +52,24 @@ function openModal(modalId) {
   modal.style.display = "block";
 }
 
-span.onclick = function () {
-  modal.style.display = "none";
-  modal = "";
-};
-
 function closeModal(e, modalId) {
   e.preventDefault();
   modal = document.getElementById(modalId);
   modal.style.display = "none";
   modal = "";
+}
+
+function RedirectToShipping(e) {
+  e.preventDefault();
+  window.location.href = "./Shipping.html";
+}
+
+function AddToCart(e) {
+  e.preventDefault();
+  var cart_count = document.getElementById("cart-count");
+  var cart = document.getElementsByClassName("cart-icon");
+  cart_count.innerHTML = +cart_count.innerText + 1;
+  cart[0].style.display = "block";
 }
 
 // When the user clicks anywhere outside of the modal, close it
