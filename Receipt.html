@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XChange | Receipt</title>
+
+    <link
+      rel="icon"
+      href="./asset/img/xchange_brand_color.svg"
+      type="image/svg+xml"
+    />
+
+    <link
+      rel="mask-icon"
+      href="./asset/img/xchange_brand_color.svg"
+      color="#000000"
+    />
+
+    <link rel="apple-touch-icon" href="./asset/img/xchange_brand_color.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="logo-box logo-header">
+        <img src="./asset/img/xchange_brand_color.svg" alt="" />
+      </div>
+    </div>
+
+    <section class="shipping-section receipt-section">
+      <div class="container">
+        <div class="shipping-section-box">
+          <div class="shipping-items">
+            <p class="text-bold summary-header">Shipping Summary</p>
+            <button
+              class="accordion"
+              id="shopping-accordion"
+              onclick="openAccordion(event , 'shopping-accordion')"
+            >
+              Shipping Summary
+            </button>
+            <ul class="summary-table">
+              <li class="text-muted">
+                <span>Subtotal</span> <span>40.00</span>
+              </li>
+              <li class="text-muted"><span>Tax</span> <span> 0.00</span></li>
+              <li class="text-muted">
+                <span>Delivery</span>
+                <span>0.00</span>
+              </li>
+              <li class="text-nor"><span>Total</span> <span>₦ 140.00</span></li>
+            </ul>
+          </div>
+          <div class="shipping-info">
+            <div class="order-id">
+              <div class="check-icon">
+                <i class="fa fa-check"></i>
+              </div>
+              <div class="order-number">
+                <span>Order #2121</span>
+                <p>Thank You Oghenemaro!</p>
+              </div>
+            </div>
+            <div class="order-details-box">
+              <div class="order-detail">
+                <h1 class="order-header text-capitalize">
+                  Your Order is confirmed
+                </h1>
+                <p>
+                  Thanks for ordering from XChange, we will send out your parcel
+                  as soon as possible. Your order will be delivered in 4-6
+                  business days. Kindly wait for it!
+                </p>
+              </div>
+              <div class="order-detail">
+                <h1 class="order-header text-capitalize">Order updates</h1>
+                <p>You’ll get shipping and delivery updates by email.</p>
+              </div>
+              <div class="order-address-box">
+                <div class="order-address">
+                  <div class="order-group">
+                    <h1 class="order-header">Contact information</h1>
+                    <p>omarookolosio94@gmail.com</p>
+                  </div>
+
+                  <div class="order-group">
+                    <h1 class="order-header">Shipping address</h1>
+                    <address class="address">
+                      Oghenemaro Okolosio<br />48 Vaughan Street Ebute Metta<br />48<br />101212
+                      Ebute Metta LA<br />Nigeria<br />&lrm;0701 906 9486
+                    </address>
+                  </div>
+
+                  <div class="order-group">
+                    <h1 class="order-header">Shipping method</h1>
+                    <p>Free Shipping</p>
+                  </div>
+                </div>
+
+                <div class="order-address">
+                  <div class="order-group">
+                    <h1 class="order-header">Payment method</h1>
+                    <ul class="order-payment-options">
+                      <li class="order-payment">
+                        <span class="">Cash on Delivery (COD) - ₦9,500.00</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="order-group">
+                    <h1 class="order-header">Billing address</h1>
+                    <address class="address">
+                      Oghenemaro Okolosio<br />48 Vaughan Street Ebute Metta<br />48<br />101212
+                      Ebute Metta LA<br />Nigeria<br />&lrm;0701 906 9486
+                    </address>
+                  </div>
+                </div>
+              </div>
+              <div class="receipt-link">
+                <a href="./index.html" class="btn btn-primary btn-sm mb-1">
+                  Continue shopping
+                </a>
+                <p class="help-info text-sm">
+                  Need help?
+                  <a href="mailto:xchange.com">Contact us</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container"></div>
+    </section>
+
+    <footer class="footer-sm">
+      <div class="container">
+        <ul class="policy-list">
+          <li>
+            <a>Refund policy</a>
+          </li>
+          <li>
+            <a>Shipping policy</a>
+          </li>
+          <li>
+            <a>Privacy policy</a>
+          </li>
+          <li>
+            <a>Terms of service</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/custom-select.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 300) {
+            $(".navbar").removeClass("home");
+          } else {
+            $(".navbar").addClass("home");
+          }
+        });
+
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 200) {
+            $("#scrollUp").css({
+              display: "block",
+            });
+          } else {
+            $("#scrollUp").css({
+              display: "none",
+            });
+          }
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          type: "GET",
+          url: "./asset/data/states.json",
+          success: function (result) {
+            var item = result;
+            var display = $("#state-select");
+
+            $.each(item, function (key, val) {
+              var div;
+              div =
+                '<option value="' + val.Code + '">' + val.Name + "</option>";
+
+              display.append(div);
+            });
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

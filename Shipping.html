@@ -123,7 +123,13 @@
         <div class="shipping-section-box">
           <div class="shipping-items">
             <p class="text-bold summary-header">Shipping Summary</p>
-            <button class="accordion">Shipping Summary</button>
+            <button
+              class="accordion"
+              id="shopping-accordion"
+              onclick="openAccordion(event , 'shopping-accordion')"
+            >
+              Shipping Summary
+            </button>
             <ul class="summary-table">
               <li><span>Subtotal</span> <span>₦ 140.00</span></li>
               <li><span>Tax</span> <span> ₦ 0.00</span></li>
@@ -216,7 +222,10 @@
                 />
                 <span for="">Save this information for next time</span>
               </div>
-              <button class="btn btn-primary btn-sm">
+              <button
+                class="btn btn-primary btn-sm btn-full"
+                onclick="Redirect(event , 'Receipt.html')"
+              >
                 Continue To Shipping
               </button>
             </form>
@@ -335,30 +344,11 @@
         });
       });
     </script>
-    <script>
-      $(document).ready(function () {
-        $.ajax({
-          type: "GET",
-          url: "./asset/data/states.json",
-          success: function (result) {
-            const item = result;
-            for (var i = 0; i <= item.length; i++) {
-              $("#state-select").append(
-                '<option value="' +
-                  item[i].Code +
-                  '">' +
-                  item[i].Name +
-                  "</option>"
-              );
-            }
-          },
-        });
-      });
-    </script>
-    <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
 
+    <script>
+      /*
+      var i;
+      var acc = document.getElementsByClassName("accordion");
       if ($(window).width() < 992) {
         for (i = 0; i < acc.length; i++) {
           acc[i].addEventListener("click", function () {
@@ -372,6 +362,28 @@
           });
         }
       }
+      */
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          type: "GET",
+          url: "./asset/data/states.json",
+          success: function (result) {
+            var item = result;
+            var display = $("#state-select");
+
+            $.each(item, function (key, val) {
+              var div;
+              div =
+                '<option value="' + val.Code + '">' + val.Name + "</option>";
+
+              display.append(div);
+            });
+          },
+        });
+      });
     </script>
   </body>
 </html>

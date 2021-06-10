@@ -64,6 +64,11 @@ function RedirectToShipping(e) {
   window.location.href = "./Shipping.html";
 }
 
+function Redirect(e, path) {
+  e.preventDefault();
+  window.location.href = "./" + path;
+}
+
 function AddToCart(e) {
   e.preventDefault();
   var cart_count = document.getElementById("cart-count");
@@ -79,3 +84,35 @@ window.onclick = function (event) {
     modal = "";
   }
 };
+
+function openAccordion(e, modalId) {
+  e.preventDefault();
+  var modal = document.getElementById(modalId);
+  if ($(window).width() < 992) {
+    modal.classList.toggle("active");
+    var panel = modal.nextElementSibling;
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + 500 + "px";
+    }
+  }
+}
+
+function openProductAccordion(e, modalId) {
+  e.preventDefault();
+  var modal = document.getElementById(modalId);
+  if ($(window).width() < 600) {
+    modal.classList.toggle("active");
+    var panel = modal.nextElementSibling;
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+      panel.style.padding = 0;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + 500 + "px";
+      panel.style.padding = "1.5rem";
+    }
+  }
+}
