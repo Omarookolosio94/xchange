@@ -1083,24 +1083,28 @@ section.page-exhibit {
   margin-bottom: 0;
 }
 
-section.page-exhibit.best-seller {
-  background: url("../asset/img/dual_controller.jpg") no-repeat;
-  height: 70vh;
+section.page-exhibit.error {
+  background: url("../asset/img/xbox_controller2.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
+}
+
+section.page-exhibit.best-seller {
+  background: url("../asset/img/dual_controller.jpg") no-repeat;
 }
 
 section.page-exhibit.new-arrivals {
   background: url("../asset/img/new_product.jpg") no-repeat;
-  height: 70vh;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
 }
 
 section.page-exhibit.cart-sections {
   background: url("../asset/img/cart_dark.jpg") no-repeat;
+}
+
+section.page-exhibit.cart-sections,
+section.page-exhibit.new-arrivals,
+section.page-exhibit.best-seller {
   height: 40vh;
   background-attachment: fixed;
   background-size: cover;
@@ -2237,6 +2241,83 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   margin-right: 5px;
 }
 
+/* Alerts */
+.alert {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 400px;
+  font-size: 12px;
+  height: auto;
+  border: 1px solid var(--border);
+  position: fixed;
+  bottom: 2rem;
+  left: -200%;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  background-color: var(--white);
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.alert.show {
+  left: 15px;
+}
+
+.alert i {
+  position: absolute;
+  top: 0;
+  color: var(--black);
+  font-size: var(--nor);
+  right: 10px;
+  top: 10px;
+}
+
+.alert p {
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.alert-success {
+  border-color: var(--success);
+  background-color: var(--success);
+}
+
+.alert-danger {
+  border-color: var(--red);
+  background-color: var(--red);
+}
+
+.alert-success p,
+.alert-success i,
+.alert-danger p,
+.alert-danger i {
+  color: white;
+}
+
+.alert-warning {
+  background-color: yellow;
+  border-color: yellow;
+}
+
+.alert-warning p,
+[data-theme="dark"] .alert-warning p {
+  color: #111111 !important;
+}
+
+.no-background {
+  background-color: var(--white);
+}
+
+/* 404 section */
+.error-section {
+  height: 80vh;
+}
+
 @media (max-width: 460px) {
   .single-product-wrapper {
     width: 96%;
@@ -2399,6 +2480,14 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 
   .product-topbar {
     display: block;
+  }
+
+  .alert {
+    width: 90%;
+  }
+
+  .alert.show {
+    left: 5px;
   }
 }
 

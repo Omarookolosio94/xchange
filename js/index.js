@@ -75,6 +75,22 @@ function AddToCart(e) {
   var cart = document.getElementsByClassName("cart-icon");
   cart_count.innerHTML = +cart_count.innerText + 1;
   cart[0].style.display = "block";
+
+  setAlert("Item Added To Cart", "alert-success");
+}
+
+function setAlert(msg, type) {
+  var alert = document.getElementById("alert-box");
+  var text = document.getElementById("alert-msg");
+
+  text.innerText = msg;
+  alert.classList.add(type);
+  alert.classList.add("show");
+
+  setTimeout(function () {
+    alert.classList.remove(type);
+    alert.classList.remove("show");
+  }, 3000);
 }
 
 // When the user clicks anywhere outside of the modal, close it

@@ -1,485 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XChange</title>
-    <link
-      rel="icon"
-      href="./asset/img/xchange_brand_color.svg"
-      type="image/svg+xml"
-    />
 
-    <link
-      rel="mask-icon"
-      href="./asset/img/xchange_brand_color.svg"
-      color="#000000"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XChange</title>
+  <link rel="icon" href="./asset/img/xchange_brand_color.svg" type="image/svg+xml" />
 
-    <link rel="apple-touch-icon" href="./asset/img/xchange_brand_color.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body>
-    <header id="top">
-      <nav class="navbar home">
-        <div class="container">
-          <!-- Logo -->
-          <div class="logo">
-            <img src="./asset/img/xchange_brand.svg" alt="" />
-          </div>
+  <link rel="mask-icon" href="./asset/img/xchange_brand_color.svg" color="#000000" />
 
-          <!-- Search Bar -->
-          <div class="nav-list">
-            <form class="search-box show-md">
-              <input
-                class="form-control"
-                type="search"
-                placeholder="Search..."
-                aria-label="Search"
-              />
-              <button class="search-btn" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
+  <link rel="apple-touch-icon" href="./asset/img/xchange_brand_color.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
 
-            <!-- Nav Links -->
-            <ul class="navlink">
-              <li class="nav-item hide-sm">
-                <a href="Cart.html" class="link-1">
-                  <i class="fas fa-shopping-cart"></i>
-                  <span>cart</span>
-                </a>
-              </li>
-              <li
-                id="toggle-nav"
-                class="nav-item link-2 toggler"
-                onclick="openNav()"
-              >
-                <i class="fas fa-bars"></i>
-              </li>
-            </ul>
-
-            <div id="side-nav" class="side-nav">
-              <div class="nav-btn" onclick="closeNav()">
-                . <i class="fas fa-times"></i>
-              </div>
-              <a class="links" href="index.html">
-                <span>Home</span>
-              </a>
-              <a class="links" href="Best_Seller.html">
-                <span>Best Sellers</span>
-              </a>
-              <a class="links" href="New_Arrivals.html">
-                <span>New Arrivals</span>
-              </a>
-              <a class="links" href="Cart.html">
-                <span>Cart</span>
-              </a>
-
-              <div
-                class="nav-btn no-border"
-                id="theme-toggle"
-                onclick="ToggleTheme()"
-              >
-                <span id="toggle-text">Activate Dark Mode</span
-                ><span class="slider round"></span>
-              </div>
-
-              <div class="nav-footer">
-                &copy;<span class="footer-year"></span> XChange E-commerce.
-                Designed By Matrix
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <section class="page-exhibit">
-      <div class="overlay">
-        <div class="container">
-          <div class="page-content">
-            <h1 class="text-capitalize text-xd">
-              Shopping with just <br />a click of a Button
-            </h1>
-            <p class="mb-3">
-              Create an account and buy your favourite products online, all for
-              free and within minutes.
-            </p>
-            <button class="btn btn-primary btn-sm mx-1" type="submit">
-              Shop now
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="main-deal my-4">
+<body>
+  <header id="top">
+    <nav class="navbar home">
       <div class="container">
-        <p class="title-text mb-2">Daily Deal</p>
-        <div class="deal-box">
-          <div class="deal-image">
-            <div class="deal-main-image mb-1">
-              <img src="./asset/img/controller.jpg" alt="" />
-            </div>
-            <div class="deal-image-list">
-              <img src="./asset/img/vr_2.jpg" alt="" />
-              <img src="./asset/img/controller_2.jpg" alt="" />
-              <img src="./asset/img/vr.jpg" alt="" />
-            </div>
-          </div>
-          <div class="deal-info">
-            <div class="line"></div>
+        <!-- Logo -->
+        <div class="logo">
+          <img src="./asset/img/xchange_brand.svg" alt="" />
+        </div>
 
-            <p class="product-price">&#8358; 20,000</p>
+        <!-- Search Bar -->
+        <div class="nav-list">
+          <form class="search-box show-md">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" />
+            <button class="search-btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
 
-            <a class="product-name" href="Product.html">
-              <h6>PS4 Joystick Controller</h6>
+          <!-- Nav Links -->
+          <ul class="navlink">
+            <li class="nav-item hide-sm">
+              <a href="Cart.html" class="link-1">
+                <i class="fas fa-shopping-cart"></i>
+                <span>cart</span>
+              </a>
+            </li>
+            <li id="toggle-nav" class="nav-item link-2 toggler" onclick="openNav()">
+              <i class="fas fa-bars"></i>
+            </li>
+          </ul>
+
+          <div id="side-nav" class="side-nav">
+            <div class="nav-btn" onclick="closeNav()">
+              . <i class="fas fa-times"></i>
+            </div>
+            <a class="links" href="index.html">
+              <span>Home</span>
+            </a>
+            <a class="links" href="Best_Seller.html">
+              <span>Best Sellers</span>
+            </a>
+            <a class="links" href="New_Arrivals.html">
+              <span>New Arrivals</span>
+            </a>
+            <a class="links" href="Cart.html">
+              <span>Cart</span>
             </a>
 
-            <div class="ratings-review mb-1">
-              <div class="ratings">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
+            <div class="nav-btn no-border" id="theme-toggle" onclick="ToggleTheme()">
+              <span id="toggle-text">Activate Dark Mode</span><span class="slider round"></span>
+            </div>
+
+            <div class="nav-footer">
+              &copy;<span class="footer-year"></span> XChange E-commerce.
+              Designed By Matrix
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-exhibit">
+    <div class="overlay">
+      <div class="container">
+        <div class="page-content">
+          <h1 class="text-capitalize text-xd">
+            Shopping with just <br />a click of a Button
+          </h1>
+          <p class="mb-3">
+            Create an account and buy your favourite products online, all for
+            free and within minutes.
+          </p>
+          <button class="btn btn-primary btn-sm mx-1" type="submit">
+            Shop now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-deal my-4">
+    <div class="container">
+      <p class="title-text mb-2">Daily Deal</p>
+      <div class="deal-box">
+        <div class="deal-image">
+          <div class="deal-main-image mb-1">
+            <img src="./asset/img/controller.jpg" alt="" />
+          </div>
+          <div class="deal-image-list">
+            <img src="./asset/img/vr_2.jpg" alt="" />
+            <img src="./asset/img/controller_2.jpg" alt="" />
+            <img src="./asset/img/vr.jpg" alt="" />
+          </div>
+        </div>
+        <div class="deal-info">
+          <div class="line"></div>
+
+          <p class="product-price">&#8358; 20,000</p>
+
+          <a class="product-name" href="Product.html">
+            <h6>PS4 Joystick Controller</h6>
+          </a>
+
+          <div class="ratings-review mb-1">
+            <div class="ratings">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <p class="is-instock"><i class="fa fa-circle"></i> In Stock</p>
+
+          <div class="product-summary my-3">
+            <p>
+              Quality game controller for professional gamers.Slick design
+              with best handle. Comes with a free charger and dual
+              controllers. Great for playing all types of games and having fun
+              time.
+            </p>
+          </div>
+
+          <!-- Add to Cart Form -->
+          <form class="cart clearfix" method="post">
+            <div class="cart-btn">
+              <p>Qty</p>
+              <div class="quantity">
+                <span class="qty-minus"
+                  onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) effect.value--;return false;"><i
+                    class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <input type="number" class="qty-text" id="qty" step="1" min="1" max="300" name="quantity" value="1" />
+                <span class="qty-plus"
+                  onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i
+                    class="fa fa-caret-up" aria-hidden="true"></i></span>
               </div>
             </div>
 
-            <p class="is-instock"><i class="fa fa-circle"></i> In Stock</p>
+            <button type="submit" value="5" class="btn btn-sm btn-primary mt-2" onclick="AddToCart(event)">
+              Add to cart
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="product-summary my-3">
-              <p>
-                Quality game controller for professional gamers.Slick design
-                with best handle. Comes with a free charger and dual
-                controllers. Great for playing all types of games and having fun
-                time.
-              </p>
-            </div>
+  <section class="product-listing">
+    <div class="container">
+      <div class="product-topbar">
+        <!-- Total Products -->
+        <p class="text-uppercase mt-1">Showing 1-8 0f 25 Products</p>
 
-            <!-- Add to Cart Form -->
-            <form class="cart clearfix" method="post">
-              <div class="cart-btn">
-                <p>Qty</p>
-                <div class="quantity">
-                  <span
-                    class="qty-minus"
-                    onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty > 1 ) effect.value--;return false;"
-                    ><i class="fa fa-caret-down" aria-hidden="true"></i
-                  ></span>
-                  <input
-                    type="number"
-                    class="qty-text"
-                    id="qty"
-                    step="1"
-                    min="1"
-                    max="300"
-                    name="quantity"
-                    value="1"
-                  />
-                  <span
-                    class="qty-plus"
-                    onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"
-                    ><i class="fa fa-caret-up" aria-hidden="true"></i
-                  ></span>
-                </div>
+        <div class="product-sorting">
+          <div class="sort-by-date">
+            <p>Sort by</p>
+            <form action="#" method="get">
+              <div class="custom-select">
+                <select>
+                  <option value="value">Date</option>
+                  <option value="value">Newest</option>
+                  <option value="value">Popular</option>
+                </select>
               </div>
-
-              <button
-                type="submit"
-                value="5"
-                class="btn btn-sm btn-primary mt-2"
-                onclick="AddToCart(event)"
-              >
-                Add to cart
-              </button>
+            </form>
+          </div>
+          <div class="view-product">
+            <p>View</p>
+            <form action="#" method="get">
+              <div class="custom-select">
+                <select>
+                  <option value="value">12</option>
+                  <option value="value">24</option>
+                  <option value="value">48</option>
+                  <option value="value">96</option>
+                </select>
+              </div>
             </form>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="product-listing">
-      <div class="container">
-        <div class="product-topbar">
-          <!-- Total Products -->
-          <p class="text-uppercase mt-1">Showing 1-8 0f 25 Products</p>
-
-          <div class="product-sorting">
-            <div class="sort-by-date">
-              <p>Sort by</p>
-              <form action="#" method="get">
-                <div class="custom-select">
-                  <select>
-                    <option value="value">Date</option>
-                    <option value="value">Newest</option>
-                    <option value="value">Popular</option>
-                  </select>
+      <div class="products-listing-box">
+        <div class="single-product-wrapper">
+          <div class="product-img">
+            <img src="./asset/img/dark_controller.jpg" alt="" />
+          </div>
+          <div class="product-description">
+            <div class="product-meta-data">
+              <div class="ratings-cart">
+                <div class="ratings">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-              </form>
+              </div>
+              <a href="Product.html">
+                <h6>PS4 Controller</h6>
+              </a>
+              <p class="product-price text-bold">&#8358;180</p>
             </div>
-            <div class="view-product">
-              <p>View</p>
-              <form action="#" method="get">
-                <div class="custom-select">
-                  <select>
-                    <option value="value">12</option>
-                    <option value="value">24</option>
-                    <option value="value">48</option>
-                    <option value="value">96</option>
-                  </select>
-                </div>
-              </form>
-            </div>
+          </div>
+          <div class="product-overlay">
+            <button class="btn btn-sm btn-primary mb-1" onclick="AddToCart(event)">Add To Cart</button>
+            <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
           </div>
         </div>
-        <div class="products-listing-box">
-          <div class="single-product-wrapper">
-            <div class="product-img">
-              <img src="./asset/img/dark_controller.jpg" alt="" />
-            </div>
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="ratings-cart">
-                  <div class="ratings">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </div>
+        <div class="single-product-wrapper">
+          <div class="product-img">
+            <img src="./asset/img/dark_controller.jpg" alt="" />
+          </div>
+          <div class="product-description">
+            <div class="product-meta-data">
+              <div class="ratings-cart">
+                <div class="ratings">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-                <a href="Product.html">
-                  <h6>PS4 Controller</h6>
-                </a>
-                <p class="product-price text-bold">&#8358;180</p>
               </div>
-            </div>
-            <div class="product-overlay">
-              <button class="btn btn-sm btn-primary mb-1" onclick="AddToCart(event)">Add To Cart</button>
-              <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
+              <a href="Product.html">
+                <h6@>PS4 Controller</h6>
+              </a>
+              <p class="product-price text-bold">&#8358;180</p>
             </div>
           </div>
-          <div class="single-product-wrapper">
-            <div class="product-img">
-              <img src="./asset/img/dark_controller.jpg" alt="" />
-            </div>
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="ratings-cart">
-                  <div class="ratings">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </div>
+          <div class="product-overlay">
+            <button class="btn btn-sm btn-primary mb-1" onclick="AddToCart(event)">Add To Cart</button>
+            <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
+          </div>
+        </div>
+        <div class="single-product-wrapper">
+          <div class="product-img">
+            <img src="./asset/img/dark_controller.jpg" alt="" />
+          </div>
+          <div class="product-description">
+            <div class="product-meta-data">
+              <div class="ratings-cart">
+                <div class="ratings">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-                <a href="Product.html">
-                  <h6@>PS4 Controller</h6>
-                </a>
-                <p class="product-price text-bold">&#8358;180</p>
               </div>
-            </div>
-            <div class="product-overlay">
-              <button class="btn btn-sm btn-primary mb-1" onclick="AddToCart(event)">Add To Cart</button>
-              <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
+              <a href="Product.html">
+                <h6@>PS4 Controller</h6>
+              </a>
+              <p class="product-price text-bold">&#8358;180</p>
             </div>
           </div>
-          <div class="single-product-wrapper">
-            <div class="product-img">
-              <img src="./asset/img/dark_controller.jpg" alt="" />
-            </div>
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="ratings-cart">
-                  <div class="ratings">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </div>
+          <div class="product-overlay">
+            <button class="btn btn-sm btn-primary mb-1" onclick="AddToCart(event)">Add To Cart</button>
+            <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
+          </div>
+        </div>
+        <div class="single-product-wrapper">
+          <div class="product-img">
+            <img src="./asset/img/dark_controller.jpg" alt="" />
+          </div>
+          <div class="product-description">
+            <div class="product-meta-data">
+              <div class="ratings-cart">
+                <div class="ratings">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-                <a href="Product.html">
-                  <h6@>PS4 Controller</h6>
-                </a>
-                <p class="product-price text-bold">&#8358;180</p>
               </div>
-            </div>
-            <div class="product-overlay">
-              <button class="btn btn-sm btn-primary mb-1" onclick="AddToCart(event)">Add To Cart</button>
-              <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
+              <a href="Product.html">
+                <h6@>PS4 Controller</h6>
+              </a>
+              <p class="product-price text-bold">&#8358;180</p>
             </div>
           </div>
-          <div class="single-product-wrapper">
-            <div class="product-img">
-              <img src="./asset/img/dark_controller.jpg" alt="" />
-            </div>
-            <div class="product-description">
-              <div class="product-meta-data">
-                <div class="ratings-cart">
-                  <div class="ratings">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                  </div>
-                </div>
-                <a href="Product.html">
-                  <h6@>PS4 Controller</h6>
-                </a>
-                <p class="product-price text-bold">&#8358;180</p>
-              </div>
-            </div>
-            <div class="product-overlay">
-              <button class="btn btn-sm btn-primary mb-1" onclick="AddToCart(event)">Add To Cart</button>
-              <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
-            </div>
+          <div class="product-overlay">
+            <button class="btn btn-sm btn-primary mb-1" onclick="AddToCart(event)">Add To Cart</button>
+            <a href="Product.html" class="btn btn-sm btn-primary">View Product</a>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="load-more mb-4">
-      <div class="container">
-        <div class="load-more-box mb-2">
-          <div class="btn btn-primary btn-sm">Load More</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-exhibit social-handle">
-      <div class="overlay">
-        <div class="container">
-          <div class="page-content">
-            <p class="mb-2">Connect with us on instagram</p>
-            <a class="btn" type="submit"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer-box">
-          <div class="footer-item footer-list">
-            <ul>
-              <li class="list-header text-uppercase">XChange</li>
-              <li>
-                <a href="">About XChange</a>
-              </li>
-              <li>
-                <a href="">Contact Us</a>
-              </li>
-              <li>
-                <a href="">Where To Buy</a>
-              </li>
-              <li>
-                <a href="">XChange Warranty</a>
-              </li>
-              <li>
-                <a href="">Terms of Service</a>
-              </li>
-              <li>
-                <a href="">Refund Policy</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-item footer-list">
-            <ul>
-              <li class="list-header text-uppercase">Shop</li>
-              <li>
-                <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="Best_Seller.html">Best Seller</a>
-              </li>
-              <li>
-                <a href="New_Arrivals.html">New Arrival</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-item footer-list">
-            <ul>
-              <li class="list-header text-uppercase">Buy From us</li>
-              <li>
-                <a href="">Order & shipping</a>
-              </li>
-              <li>
-                <a href="">Replacement Policy</a>
-              </li>
-              <li>
-                <a href="">XChange Warranty</a>
-              </li>
-              <li>
-                <a href="">Privacy Policy</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-item footer-list">
-            <ul>
-              <li class="list-header text-uppercase">Customer Service</li>
-              <li>
-                <a href="tel:+2348011111">+234 0000 000 000</a>
-              </li>
-              <li>
-                <a href="tel:+2348019000">+234 0000 000 000</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <div id="scrollUp" onclick="scrollTopAnimated()">
-      <i class="fa fa-angle-up" aria-hidden="true"></i>
     </div>
+  </section>
 
-    <a class="cart-icon" href="Cart.html">
-      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-      <span id="cart-count"></span>
-    </a>
+  <section class="load-more mb-4">
+    <div class="container">
+      <div class="load-more-box mb-2">
+        <div class="btn btn-primary btn-sm">Load More</div>
+      </div>
+    </div>
+  </section>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/custom-select.js"></script>
+  <section class="page-exhibit social-handle">
+    <div class="overlay">
+      <div class="container">
+        <div class="page-content">
+          <p class="mb-2">Connect with us on instagram</p>
+          <a class="btn" type="submit"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-      $(document).ready(function () {
-        $(window).scroll(function () {
-          var scroll = $(window).scrollTop();
-          if (scroll > 300) {
-            $(".navbar").removeClass("home");
-            $(".cart-icon").css({ display: "block" });
-          } else {
-            $(".navbar").addClass("home");
-            $(".cart-icon").css({ display: "none" });
-          }
-        });
+  <footer>
+    <div class="container">
+      <div class="footer-box">
+        <div class="footer-item footer-list">
+          <ul>
+            <li class="list-header text-uppercase">XChange</li>
+            <li>
+              <a href="">About XChange</a>
+            </li>
+            <li>
+              <a href="">Contact Us</a>
+            </li>
+            <li>
+              <a href="">Where To Buy</a>
+            </li>
+            <li>
+              <a href="">XChange Warranty</a>
+            </li>
+            <li>
+              <a href="">Terms of Service</a>
+            </li>
+            <li>
+              <a href="">Refund Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-item footer-list">
+          <ul>
+            <li class="list-header text-uppercase">Shop</li>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="Best_Seller.html">Best Seller</a>
+            </li>
+            <li>
+              <a href="New_Arrivals.html">New Arrival</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-item footer-list">
+          <ul>
+            <li class="list-header text-uppercase">Buy From us</li>
+            <li>
+              <a href="">Order & shipping</a>
+            </li>
+            <li>
+              <a href="">Replacement Policy</a>
+            </li>
+            <li>
+              <a href="">XChange Warranty</a>
+            </li>
+            <li>
+              <a href="">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-item footer-list">
+          <ul>
+            <li class="list-header text-uppercase">Customer Service</li>
+            <li>
+              <a href="tel:+2348011111">+234 0000 000 000</a>
+            </li>
+            <li>
+              <a href="tel:+2348019000">+234 0000 000 000</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-        $(window).scroll(function () {
-          var scroll = $(window).scrollTop();
-          if (scroll > 1000) {
-            $("#scrollUp").css({ display: "block" });
-          } else {
-            $("#scrollUp").css({ display: "none" });
-          }
-        });
+  <div id="scrollUp" onclick="scrollTopAnimated()">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+  </div>
+
+  <a class="cart-icon" href="Cart.html">
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    <span id="cart-count"></span>
+  </a>
+
+  <div class="alert" id="alert-box">
+    <p id="alert-msg"></p>
+    <!--
+      <i class="fas fa-times"></i>
+    -->
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/custom-select.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 300) {
+          $(".navbar").removeClass("home");
+          $(".cart-icon").css({
+            display: "block"
+          });
+        } else {
+          $(".navbar").addClass("home");
+          $(".cart-icon").css({
+            display: "none"
+          });
+        }
       });
-    </script>
-  </body>
+
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 1000) {
+          $("#scrollUp").css({
+            display: "block"
+          });
+        } else {
+          $("#scrollUp").css({
+            display: "none"
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
 </html>
